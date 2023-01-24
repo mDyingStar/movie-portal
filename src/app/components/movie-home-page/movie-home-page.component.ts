@@ -1,6 +1,7 @@
 import {Component, OnInit} from '@angular/core';
 import {MovieService} from "../../services/movie.service";
 import {Subject, takeUntil} from "rxjs";
+import {MatSlideToggleChange} from "@angular/material/slide-toggle";
 
 @Component({
   selector: 'app-movie-home-page',
@@ -11,6 +12,7 @@ export class MovieHomePageComponent implements OnInit {
   private unsubscribe$ = new Subject();
 
   trendingMovies: any[] = [];
+  showTrendingMoviesDay = true;
 
   constructor(private movieService: MovieService) {
   }
@@ -30,5 +32,10 @@ export class MovieHomePageComponent implements OnInit {
       .subscribe((movies) => {
       this.trendingMovies = [...this.trendingMovies, ...movies];
     });
+  }
+
+  changeTrendingMovies($event: MatSlideToggleChange) {
+    this.showTrendingMoviesDay = $event.checked;
+    console.log(this.showTrendingMoviesDay);
   }
 }

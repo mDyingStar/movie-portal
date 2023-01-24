@@ -1,3 +1,11 @@
+<div class="banner">
+  <img src="assets/images/banner.jpg" alt="banner" />
+</div>
 <div class="trending-movies">
+  <div class="trending-selector">
+    <h2>Trends</h2>
+    <button [class.green-background]="showTrendingMoviesDay">Today</button>
+    <button [class.green-background]="!showTrendingMoviesDay">This Week</button>
+  </div>
   <app-movie-list [movies]="trendingMovies" [title]="'Trending Movies'"></app-movie-list>
 </div>
