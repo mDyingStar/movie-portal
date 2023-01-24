@@ -1,8 +1,6 @@
 import {Component, OnInit} from '@angular/core';
 import {MovieService} from "../../services/movie.service";
-import {map, Subject, takeUntil} from "rxjs";
-import {MatSlideToggleChange} from "@angular/material/slide-toggle";
-import {Movie} from "../../models/movie";
+import {Subject, takeUntil} from "rxjs";
 
 @Component({
   selector: 'app-movie-home-page',
@@ -12,6 +10,7 @@ import {Movie} from "../../models/movie";
 export class MovieHomePageComponent implements OnInit {
   private unsubscribe$ = new Subject();
 
+  upcomingMovies: any[] = [];
   trendingMovies: any[] = [];
   showTrendingMoviesDay = true;
 
@@ -36,12 +35,11 @@ export class MovieHomePageComponent implements OnInit {
       });
   }
 
-  changeTrendingMovies($event: MatSlideToggleChange) {
-    this.showTrendingMoviesDay = $event.checked;
-    console.log(this.showTrendingMoviesDay);
-  }
-
   getUpcomingMovies() {
-
+    this.movieService.getUpcomingMoviesWithTrailers()
+      .pipe(takeUntil(this.unsubscribe$))
+      .subscribe((movies) => {
+        this.upcomingMovies = [...this.upcomingMovies, ...movies];
+      });
   }
 }

@@ -6,5 +6,6 @@ export interface Movie {
   backdrop_path: string;
   release_date: string;
   genre_ids: number[];
+  trailer: any;
 }
 
