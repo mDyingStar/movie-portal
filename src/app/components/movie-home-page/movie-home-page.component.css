@@ -34,3 +34,9 @@
   background-position: bottom;
 }
 
+.upcoming-movies {
+  background-image: url("../../../assets/images/trailer-background.jpg");
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+

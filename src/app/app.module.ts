@@ -8,6 +8,8 @@ import {MovieHomePageComponent} from './components/movie-home-page/movie-home-pa
 import {HttpClientModule} from "@angular/common/http";
 import {BrowserAnimationsModule} from '@angular/platform-browser/animations';
 import {FormsModule} from "@angular/forms";
+import { MovieTrailerCardComponent } from './components/movie-trailer-card/movie-trailer-card.component';
+import { MovieTrailerListComponent } from './components/movie-trailer-list/movie-trailer-list.component';
 
 @NgModule({
   declarations: [
@@ -15,6 +17,8 @@ import {FormsModule} from "@angular/forms";
     MovieCardComponent,
     MovieListComponent,
     MovieHomePageComponent,
+    MovieTrailerCardComponent,
+    MovieTrailerListComponent,
   ],
   imports: [
     BrowserModule,

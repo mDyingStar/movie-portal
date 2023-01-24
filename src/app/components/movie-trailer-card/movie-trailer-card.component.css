@@ -1,0 +1,10 @@
+.trailer-header img {
+  border-radius: 7px; /* round the top corners of the image */
+  border: 1px solid white;
+}
+
+.trailer-content h3 {
+  display: flex;
+  justify-content: center;
+  color: white;
+}
