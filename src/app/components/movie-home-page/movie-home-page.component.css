@@ -1,6 +1,6 @@
 .banner img {
   width: 100%;
-  height: 100%;
+  height: 500px;
   object-fit: cover;
 }
 
@@ -13,6 +13,7 @@
 }
 
 .trending-selector button {
+  border: 1px solid black;
   border-radius: 15px;
   height: 25px;
   width: 8rem;
@@ -25,5 +26,11 @@
 .green-background {
   background-color: #129c0d;
   color: white;
+}
+
+.trending-movies {
+  background-image: url("../../../assets/images/trending.svg");
+  background-repeat: no-repeat;
+  background-position: bottom;
 }
 

@@ -9,13 +9,17 @@ import {HttpClientModule} from "@angular/common/http";
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import {MatSlideToggleModule} from "@angular/material/slide-toggle";
 import {FormsModule} from "@angular/forms";
+import { MovieTrailerCardComponent } from './components/movie-trailer-card/movie-trailer-card.component';
+import { MovieTrailerListComponent } from './components/movie-trailer-list/movie-trailer-list.component';
 
 @NgModule({
   declarations: [
     AppComponent,
     MovieCardComponent,
     MovieListComponent,
-    MovieHomePageComponent
+    MovieHomePageComponent,
+    MovieTrailerCardComponent,
+    MovieTrailerListComponent
   ],
   imports: [
     BrowserModule,
