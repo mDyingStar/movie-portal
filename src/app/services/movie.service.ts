@@ -3,6 +3,7 @@ import {environment} from "../../environments/environment";
 import {HttpClient} from "@angular/common/http";
 import {map} from "rxjs";
 import {Movie} from "../models/movie";
+import {Trailer} from "../models/trailer";
 
 @Injectable({
   providedIn: 'root'
@@ -13,7 +14,21 @@ export class MovieService {
   }
 
   getUpcomingMovies() {
-    return this.http.get(`https://api.themoviedb.org/3/movie/upcoming?api_key=${environment.apiKey}&language=en-US&page=1`);
+    return this.http.get(`https://api.themoviedb.org/3/movie/upcoming?api_key=${environment.apiKey}&language=en-US&page=2`)
+      .pipe(
+        map((response: any) => {
+          return response.results.map((movie: any) => {
+            return {
+              id: movie.id,
+              original_title: movie.original_title,
+              vote_average: movie.vote_average,
+              poster_path: movie.poster_path,
+              backdrop_path: movie.backdrop_path,
+              release_date: movie.release_date,
+              genre_ids: movie.genre_ids
+            } as Movie;
+          });
+        }));
   }
 
   getTopRatedMovies() {
@@ -30,7 +45,7 @@ export class MovieService {
         map((response: any) => {
           return response.results.map((movie: any) => {
             return {
-              id: response.id,
+              id: movie.id,
               original_title: movie.original_title,
               vote_average: movie.vote_average,
               poster_path: movie.poster_path,
@@ -46,8 +61,21 @@ export class MovieService {
     return this.http.get(`https://api.themoviedb.org/3/trending/movie/week?api_key=${environment.apiKey}`);
   }
 
-  getSearchedMovie(name: String) {
+  getSearchedMovie(name: string) {
     return this.http.get(`https://api.themoviedb.org/3/search/movie?api_key=${environment.apiKey}` +
       `&language=en-US&query=${name}&page=1&include_adult=true`);
+  }
+
+  getMovieTrailer(movieId: number) {
+    return this.http.get(`https://api.themoviedb.org/3/movie/${movieId}/videos?api_key=${environment.apiKey}&language=en-US`)
+      .pipe(
+        map((response: any) => {
+          return response.results.map((movie: any) => {
+            return {
+              key: movie.key,
+              site: movie.site,
+            } as Trailer;
+          });
+        }));
   }
 }

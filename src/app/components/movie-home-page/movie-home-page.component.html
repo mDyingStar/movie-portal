@@ -7,7 +7,11 @@
     <button [class.green-background]="showTrendingMoviesDay">Today</button>
     <button [class.green-background]="!showTrendingMoviesDay">This Week</button>
   </div>
-  <div class="trending-movies">
+  <div class="trending-movie-list">
     <app-movie-list [movies]="trendingMovies" [title]="'Trending Movies'"></app-movie-list>
   </div>
+</div>
+
+<div class="upcoming-movies">
+  <app-movie-trailer-list></app-movie-trailer-list>
 </div>

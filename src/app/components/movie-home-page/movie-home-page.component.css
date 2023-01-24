@@ -28,7 +28,7 @@
   color: white;
 }
 
-.trending-movies {
+.trending-movie-list {
   background-image: url("../../../assets/images/trending.svg");
   background-repeat: no-repeat;
   background-position: bottom;

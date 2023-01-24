@@ -1,4 +1,5 @@
-import { Component, OnInit } from '@angular/core';
+import {Component, Input, OnInit} from '@angular/core';
+import {Trailer} from "../../models/trailer";
 
 @Component({
   selector: 'app-movie-trailer-card',
@@ -6,6 +7,8 @@ import { Component, OnInit } from '@angular/core';
   styleUrls: ['./movie-trailer-card.component.css']
 })
 export class MovieTrailerCardComponent implements OnInit {
+
+  @Input() trailer: Trailer = {} as Trailer;
 
   constructor() { }
 

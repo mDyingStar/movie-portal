@@ -4,6 +4,11 @@
   flex-direction: column;
 }
 
+.movie-card:hover {
+  transform: scale(1.05);
+  transition: transform 0.5s ease;
+}
+
 .movie-header img {
   width: 100%; /* set the width of the image to 100% */
   border-radius: 7px; /* round the top corners of the image */
