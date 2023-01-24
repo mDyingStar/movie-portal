@@ -1,0 +1,14 @@
+.movie-card {
+  width: 180px; /* set the width of the card to 300px */
+}
+
+.movie-header {
+  width: 100%; /* set the width of the image container to 100% */
+  overflow: hidden; /* hide any overflow */
+}
+
+.movie-header img {
+  width: 100%; /* set the width of the image to 100% */
+  object-fit: cover; /* ensure the image covers the entire container while maintaining its aspect ratio */
+  border-radius: 5px; /* round the top corners of the image */
+}
