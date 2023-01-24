@@ -1,3 +1,5 @@
-<div class="movie-list" *ngFor="let movie of movies">
-  <app-movie-card [movie]="movie"></app-movie-card>
+<div class="movie-list">
+  <div class="movie-card" *ngFor="let movie of movies">
+    <app-movie-card [movie]="movie"></app-movie-card>
+  </div>
 </div>

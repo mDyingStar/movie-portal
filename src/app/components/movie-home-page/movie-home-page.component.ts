@@ -1,5 +1,6 @@
 import {Component, OnInit} from '@angular/core';
 import {MovieService} from "../../services/movie.service";
+import {Subject, takeUntil} from "rxjs";
 
 @Component({
   selector: 'app-movie-home-page',
@@ -7,6 +8,7 @@ import {MovieService} from "../../services/movie.service";
   styleUrls: ['./movie-home-page.component.css']
 })
 export class MovieHomePageComponent implements OnInit {
+  private unsubscribe$ = new Subject();
 
   trendingMovies: any[] = [];
 
@@ -17,8 +19,15 @@ export class MovieHomePageComponent implements OnInit {
     this.getTrendingMoviesDay();
   }
 
+  ngOnDestroy(): void {
+    this.unsubscribe$.next(true);
+    this.unsubscribe$.complete();
+  }
+
   getTrendingMoviesDay() {
-    this.movieService.getTrendingMoviesDay().subscribe((movies) => {
+    this.movieService.getTrendingMoviesDay()
+      .pipe(takeUntil(this.unsubscribe$))
+      .subscribe((movies) => {
       this.trendingMovies = [...this.trendingMovies, ...movies];
     });
   }

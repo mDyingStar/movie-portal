@@ -1,0 +1,20 @@
+.movie-list {
+  display: flex;
+  flex-direction: row;
+  overflow-x: auto;
+}
+
+.movie-card {
+  margin: 10px;
+}
+
+.movie-list::-webkit-scrollbar {
+  background-color: #F5F5F5; /* sets the background color of the scrollbar */
+  height: 10px;
+}
+
+.movie-list::-webkit-scrollbar-thumb {
+  background-color: #8c8c8c; /* sets the background color of the thumb */
+  border-radius: 10px; /* sets the border radius of the thumb */
+}
+
