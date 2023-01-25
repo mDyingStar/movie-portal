@@ -30,4 +30,6 @@ apiKey:<<api-key>>
 npm run start
 ```
 
+## Contributing
 
+Everyone is welcome and appreciated to help with my project. If you would like to contribute, please read through https://github.com/mDyingStar/movie-portal/blob/master/CONTRIBUTING.md before getting started.
