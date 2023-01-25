@@ -1,9 +1,0 @@
-All changes will be made on a new branch that branches off from the dev branch.
-
-Branch concept:
-Features -> Features/<<description>>
-Refactoring -> Refactoring/<<description>>
-Bugfix -> Fix/<<description>>
-
-All additions and changes must be covered by unit tests.
-The Pull-Request will be made to the dev branch.
