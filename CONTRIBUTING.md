@@ -68,10 +68,9 @@ address, posting via an official social media account, or acting as an appointed
 representative at an online or offline event. Representation of a project may be
 further defined and clarified by project maintainers.
 
-## Information
+## Branch concept:
 All changes will be made on a new branch that branches off from the dev branch.
 
-## Branch concept:
 Features -> Features/description <br>
 Refactoring -> Refactoring/description <br>
 Bugfix -> Fix/description <br>
