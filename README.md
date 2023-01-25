@@ -19,7 +19,9 @@ The movie portal can display all film trends based on selectable parameters. Add
 npm i
 ```
 3. In order for the application to work locally, you need an API key for the movie database. You can get this API key by registering a user on https://www.themoviedb.org/. In the first deployed release, the key will be provided by the owner.
-4. Place this API-Key under environment.ts:
+4. You find the API Key in your created user under: <br>
+Settings -> API -> API Key (v3 auth) <br>
+Place this API Key under environment.ts:
 ```
 apiKey:<<api-key>>
 ```
