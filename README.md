@@ -7,6 +7,8 @@ The application was launched to train the developer's personal skills in the ful
 ## Movie-Portal
 
 The movie portal can display all film trends based on selectable parameters. Additionally, there is the option to play various trailers.
+Currently, the functionality is still under development and will offer many more possibilities in the future.
+
 <div align="center">
   <img src="https://user-images.githubusercontent.com/70911193/214502276-e4b88432-8ada-46fd-8205-b1d579d4521c.png">
 </div>
