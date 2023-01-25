@@ -1,27 +1,17 @@
-# MoviePortal
+<div align="center">
+  <img src="https://user-images.githubusercontent.com/70911193/214497485-dc0ccc11-3e78-4311-9ddb-0451abcc65a5.png">
+</div>
 
-This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 14.2.2.
+The application was launched to train the developer's personal skills in the full-stack area, specifically in the front-end. The movie portal always retrieves the latest film information from a public database through an API provided by https://developers.themoviedb.org/3. The developer wants to share the opportunity to improve their skills in the full-stack area with others, and therefore makes the project available as an open-source project.
 
-## Development server
+## Installation
 
-Run `ng serve` for a dev server. Navigate to `http://localhost:4200/`. The application will automatically reload if you change any of the source files.
-
-## Code scaffolding
-
-Run `ng generate component component-name` to generate a new component. You can also use `ng generate directive|pipe|service|class|guard|interface|enum|module`.
-
-## Build
-
-Run `ng build` to build the project. The build artifacts will be stored in the `dist/` directory.
-
-## Running unit tests
-
-Run `ng test` to execute the unit tests via [Karma](https://karma-runner.github.io).
-
-## Running end-to-end tests
-
-Run `ng e2e` to execute the end-to-end tests via a platform of your choice. To use this command, you need to first add a package that implements end-to-end testing capabilities.
-
-## Further help
-
-To get more help on the Angular CLI use `ng help` or go check out the [Angular CLI Overview and Command Reference](https://angular.io/cli) page.
+1. Clone or fork the project. <br>
+2. Run this command in the IDE or project root to install the required node modules:
+```
+npm i
+```
+3. Start the application on localhost
+```
+npm run start
+```
