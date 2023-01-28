@@ -20,9 +20,12 @@ Currently, the functionality is still under development and will offer many more
 ```
 npm i
 ```
-3. In order for the application to work locally, you need an API key for the movie database. You can get this API key by registering a user on https://www.themoviedb.org/. In the first deployed release, the key will be provided by the owner.
-4. You find the API Key in your created user under: <br>
-Settings -> API -> API Key (v3 auth) <br>
+3. For local development, it is necessary for you to register an account at https://www.themoviedb.org/ and thus receive an API key. Once a CI/CD pipeline is set up and the website is hosted in the cloud, the owner of the repository will store an API key for the production environment in a cloud key-value store.
+Please do not share or push your API key to prevent potential abuse.
+
+4. After Registering an account you find your API key under settings:
+![image](https://user-images.githubusercontent.com/70911193/215284913-90e04ab8-3c09-4fe9-bd2c-5d3d3b49fa87.png)
+
 Place this API Key under environment.ts:
 ```
 apiKey:<<api-key>>
