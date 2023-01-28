@@ -38,7 +38,7 @@ export class MovieService {
     return forkJoin(movies.map((movie: Movie) => {
       return this.http.get(`https://api.themoviedb.org/3/movie/${movie.id}/videos?api_key=${environment.apiKey}&language=en-US`)
         .pipe(map((videoResponse: any) => {
-          movie.trailer = videoResponse.results[0].key;
+          movie.trailer = videoResponse.results[0]?.key;
           return movie;
         }));
     }));

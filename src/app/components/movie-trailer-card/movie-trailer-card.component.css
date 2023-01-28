@@ -8,3 +8,8 @@
   justify-content: center;
   color: white;
 }
+
+.trailer-action img {
+  width: 80px;
+  background: transparent
+}
