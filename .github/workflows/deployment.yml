@@ -1,0 +1,23 @@
+name: Deploy to GitHub Pages
+
+on:
+  push:
+    branches:
+      - master
+
+jobs:
+  deploy:
+    runs-on: ubuntu-latest
+
+    steps:
+    - name: Checkout code
+      uses: actions/checkout@v2
+
+    - name: Install dependencies
+      run: npm install
+
+    - name: Build the app
+      run: ng build --configuration=production --base-href "https://mdyingstar.github.io/movie-portal/"
+
+    - name: Deploy to GitHub Pages
+      run: npx angular-cli-ghpages
