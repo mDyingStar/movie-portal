@@ -4,6 +4,7 @@
 
 The application was launched to train the developer's personal skills in the full-stack area, specifically in the front-end. The movie portal always retrieves the latest film information from a public database through an API provided by https://developers.themoviedb.org/3. The developer wants to share the opportunity to improve their skills in the full-stack area with others, and therefore makes the project available as an open-source project.
 
+The latest version of the master branch can be accessed at this link: https://mdyingstar.github.io/movie-portal/
 ## Movie-Portal
 
 The movie portal can display all film trends based on selectable parameters. Additionally, there is the option to play various trailers.
