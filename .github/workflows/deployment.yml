@@ -19,8 +19,11 @@ jobs:
     - name: Install angular-cli-ghpages
       run: npm install -g angular-cli-ghpages
 
+    - name: Install Angular CLI
+      run: npm install -g @angular/cli
+
     - name: Build the app
-      run: npm build --prod --base-href "https://mdyingstar.github.io/movie-portal/"
+      run: ng build --configuration=production --base-href "https://mdyingstar.github.io/movie-portal/"
 
     - name: Deploy to GitHub Pages
       run: npx angular-cli-ghpages
