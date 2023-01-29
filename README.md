@@ -21,7 +21,7 @@ Currently, the functionality is still under development and will offer many more
 ```
 npm i
 ```
-3. For local development, it is necessary for you to register an account at https://www.themoviedb.org/ and thus receive an API key. Once a CI/CD pipeline is set up and the website is hosted in the cloud, the owner of the repository will store an API key for the production environment in a cloud key-value store.
+3. For local development, it is necessary for you to register an account at https://www.themoviedb.org/ and thus receive an API key.
 Please do not share or push your API key to prevent potential abuse.
 
 4. After Registering an account you find your API key under settings:
