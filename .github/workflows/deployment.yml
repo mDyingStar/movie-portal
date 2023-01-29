@@ -16,6 +16,9 @@ jobs:
     - name: Install dependencies
       run: npm install
 
+    - name: Install angular-cli-ghpages
+      run: npm install -g angular-cli-ghpages
+
     - name: Build the app
       run: ng build --configuration=production --base-href "https://mdyingstar.github.io/movie-portal/"
 
