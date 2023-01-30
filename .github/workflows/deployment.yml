@@ -22,6 +22,11 @@ jobs:
     - name: Install Angular CLI
       run: npm install -g @angular/cli
 
+    - name: Set git identity
+      run: |
+        git config --global user.email "alexmitdembart@gmail.com"
+        git config --global user.name "mDyingStar"
+
     - name: Build the app
       run: ng build --configuration=production --base-href "https://mdyingstar.github.io/movie-portal/"
 
