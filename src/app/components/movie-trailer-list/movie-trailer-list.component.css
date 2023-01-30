@@ -1,12 +1,9 @@
 .trailer-list {
-  display: flex;
-  flex-direction: row;
-  overflow-x: auto;
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  grid-gap: 10px;
   padding-top: 3.5rem;
-}
-
-.trailer-card {
-  margin: 10px;
+  padding: 10px;
 }
 
 .trailer-card img {
@@ -14,12 +11,24 @@
   border-radius: 7px; /* round the top corners of the image */
 }
 
-.trailer-list::-webkit-scrollbar {
-  background-color: #F5F5F5; /* sets the background color of the scrollbar */
+/* .trailer-list::-webkit-scrollbar {
+  background-color: #F5F5F5;
   height: 10px;
 }
 
 .trailer-list::-webkit-scrollbar-thumb {
-  background-color: #8c8c8c; /* sets the background color of the thumb */
-  border-radius: 10px; /* sets the border radius of the thumb */
+  background-color: #8c8c8c;
+  border-radius: 10px;
+} */
+
+@media screen and (min-width: 850px) {
+  .trailer-list {
+    grid-template-columns: repeat(3, 1fr);
+  }
+}
+
+@media screen and (min-width: 1150px) {
+  .trailer-list {
+    grid-template-columns: repeat(4, 1fr);
+  }
 }
