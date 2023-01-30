@@ -1,20 +1,41 @@
 .movie-list {
-  display: flex;
-  flex-direction: row;
-  overflow-x: auto;
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  grid-gap: 20px;
+  margin-bottom: 40px;
 }
 
-.movie-card {
-  margin: 10px;
-}
 
-.movie-list::-webkit-scrollbar {
-  background-color: #F5F5F5; /* sets the background color of the scrollbar */
+/* .movie-list::-webkit-scrollbar {
+  background-color: #F5F5F5;
   height: 10px;
 }
 
 .movie-list::-webkit-scrollbar-thumb {
-  background-color: #8c8c8c; /* sets the background color of the thumb */
-  border-radius: 10px; /* sets the border radius of the thumb */
+  background-color: #8c8c8c;
+  border-radius: 10px;
+} */
+
+@media screen and (min-width: 650px) {
+  .movie-list {
+    grid-template-columns: repeat(4, 1fr);
+  }
+}
+
+@media screen and (min-width: 850px) {
+  .movie-list {
+    grid-template-columns: repeat(5, 1fr);
+  }
+}
+
+@media screen and (min-width: 1050px) {
+  .movie-list {
+    grid-template-columns: repeat(6, 1fr);
+  }
+}
+@media screen and (min-width: 1250px) {
+  .movie-list {
+    grid-template-columns: repeat(7, 1fr);
+  }
 }
 
