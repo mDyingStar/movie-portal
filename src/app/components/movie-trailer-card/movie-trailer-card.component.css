@@ -1,4 +1,9 @@
-.trailer-header img {
+.trailer-header {
+  display: flex;
+  width: 484px;
+}
+
+.trailer-header .trailer-poster {
   border-radius: 7px; /* round the top corners of the image */
   border: 1px solid white;
 }
@@ -9,7 +14,21 @@
   color: white;
 }
 
+.trailer-action {
+  display: flex;;
+  justify-content: center;
+  align-items: center;
+  margin-top: 10px;
+}
+
+.trailer-action {
+  position: relative;
+  top: 50%;
+  right: 58%;
+}
+
 .trailer-action img {
   width: 80px;
-  background: transparent
+  background: transparent;
+  filter: brightness(0) invert(1)
 }
