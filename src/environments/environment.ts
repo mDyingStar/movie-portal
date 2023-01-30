@@ -4,7 +4,7 @@
 
 export const environment = {
   production: false,
-  apiKey: '<<api-key>>',
+  apiKey: process.env["API_KEY"],
 };
 
 /*
