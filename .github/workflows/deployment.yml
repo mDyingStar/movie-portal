@@ -29,5 +29,5 @@ jobs:
       run: |
         git config --global user.email "alexmitdembart@gmail.com"
         git config --global user.name "mDyingStar"
-        git config --global user.password "${{ secrets.GITHUB_PAT }}"
+        git config --global user.password "${{ secrets.PAT }}"
         npx angular-cli-ghpages --no-silent
