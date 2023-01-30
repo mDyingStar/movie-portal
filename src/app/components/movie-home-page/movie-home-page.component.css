@@ -30,7 +30,7 @@
 
 .trending-movie-list {
   background-image: url("../../../assets/images/trending.svg");
-  background-repeat: no-repeat;
+  background-repeat: repeat-x;
   background-position: bottom;
 }
 
